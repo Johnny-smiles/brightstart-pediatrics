@@ -6,7 +6,7 @@
             At BrightStart Pediatrics, we’re more than medical care — we’re partners in your child’s health journey.
         </p>
         <p>
-            As a locally owned clinic in Minnesota, we believe in building trust with every smile, listening ear, and wellness visit.
+            As a locally owned clinic in Arkansas, we believe in building trust with every smile, listening ear, and wellness visit.
             From first steps to first sports, we’re here every step of the way.
         </p>
         <NuxtImg src="/about-illustration.png" alt="Friendly pediatric care illustration" class="about-img" />
