@@ -12,10 +12,10 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                primary: '#5EC4B8',  // soft teal
-                accent: '#FFD166',   // warm yellow
-                neutral: '#F8FAFC',  // off white
-                dark: '#1E293B'      // navy/blue-gray
+                primary: '#5EC4B8',
+                accent: '#FFD166',
+                neutral: '#F8FAFC',
+                dark: '#1E293B'
             },
             fontFamily: {
                 sans: ['"Nunito"', 'sans-serif'],

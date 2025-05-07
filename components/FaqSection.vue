@@ -30,60 +30,80 @@
 <script setup></script>
 
 <style scoped>
+/* overall section */
 .faq {
     padding: 4rem 2rem;
     background: #eef2f7;
     color: #333;
+    scroll-behavior: smooth;
 }
+
+/* grid layout: single-column by default, 2-col at md+ */
 .faq-container {
-    display: flex;
+    display: grid;
     gap: 2rem;
-    flex-direction: column;
+    grid-template-columns: 1fr;
 }
-@media(min-width: 768px) {
+@media (min-width: 768px) {
     .faq-container {
-        flex-direction: row;
-        align-items: flex-start;
+        grid-template-columns: 200px 1fr;
     }
-    .faq-nav {
-        flex: 1;
-        max-width: 200px;
-        position: sticky;
-        top: 2rem;
-        padding-right: 1rem;
-    }
+}
+
+/* sidebar nav styling */
+.faq-nav {
+    position: sticky;
+    top: 2rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .faq-nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
-.faq-nav li {
-    margin-bottom: 1rem;
+.faq-nav li + li {
+    margin-top: 0.75rem;
 }
 .faq-nav a {
+    display: block;
     color: #224870;
+    font-weight: 600;
     text-decoration: none;
-    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: background 0.2s;
 }
-.faq-nav a:hover {
-    text-decoration: underline;
+.faq-nav a:hover,
+.faq-nav a:focus {
+    background: rgba(34, 72, 112, 0.1);
 }
+
+/* main content */
 .faq-content {
-    flex: 3;
     max-width: 800px;
-    margin: auto;
+    margin: 0 auto;
 }
 .faq h2 {
     text-align: center;
+    font-size: 2rem;
     margin-bottom: 2rem;
 }
+
+/* each question “card” */
 .faq-item {
-    margin-bottom: 2rem;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     scroll-margin-top: 6rem;
+    margin-bottom: 2rem;
 }
 .faq-item h3 {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
 }
 .faq-item h3 a {
     color: inherit;
@@ -91,5 +111,9 @@
 }
 .faq-item h3 a:hover {
     text-decoration: underline;
+}
+.faq-item p {
+    margin: 0;
+    line-height: 1.6;
 }
 </style>

@@ -69,7 +69,7 @@
 }
 
 /* give a little breathing room under the image */
-.card ::v-deep img {
+.card :deep(img) {
     margin-bottom: 1rem;
 }
 
