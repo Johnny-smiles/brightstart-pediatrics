@@ -1,63 +1,69 @@
 // nuxt.config.ts
 export default defineNuxtConfig({
-  // Server‐side render and static target
+  // Enable SSR + static output
   ssr: true,
   nitro: {
     preset: 'static'
   },
 
-  // <head> configuration for SEO and social
+  // <head> config for BrightStart Pediatrics
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
-      title: 'Arkansas Pediatrician — Caring for Your Child’s Health',
+      title: 'BrightStart Pediatrics — Nurturing Care for Your Little Ones',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           name: 'description',
           content:
-              'Comprehensive pediatric care in Arkansas, from newborn check-ups to teen wellness—your child’s health is our priority.'
+              'From newborn checkups to teen wellness, BrightStart Pediatrics offers compassionate and expert pediatric care for every stage of your child’s growth.'
         },
         { name: 'robots', content: 'index, follow' },
-        { property: 'og:title', content: 'Arkansas Pediatrician — Expert Child Healthcare' },
+        {
+          property: 'og:title',
+          content: 'BrightStart Pediatrics — Nurturing Care for Your Little Ones'
+        },
         {
           property: 'og:description',
           content:
-              'Comprehensive pediatric care in Arkansas, from newborn check-ups to teen wellness—your child’s health is our priority.'
+              'From newborn checkups to teen wellness, BrightStart Pediatrics offers compassionate and expert pediatric care for every stage of your child’s growth.'
         },
         {
           property: 'og:image',
-          content: 'https://arkansaspediatrician.com/social-preview.png'
+          content: 'https://brightstart-pediatrics.netlify.app/social-preview.png'
         },
-        { property: 'og:url', content: 'https://arkansaspediatrician.com' },
+        {
+          property: 'og:url',
+          content: 'https://brightstart-pediatrics.netlify.app'
+        },
         { property: 'og:type', content: 'website' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Arkansas Pediatrician — Expert Child Healthcare' },
+        {
+          name: 'twitter:title',
+          content: 'BrightStart Pediatrics — Nurturing Care for Your Little Ones'
+        },
         {
           name: 'twitter:description',
           content:
-              'Comprehensive pediatric care in Arkansas, from newborn check-ups to teen wellness—your child’s health is our priority.'
+              'From newborn checkups to teen wellness, BrightStart Pediatrics offers compassionate and expert pediatric care for every stage of your child’s growth.'
         },
         {
           name: 'twitter:image',
-          content: 'https://arkansaspediatrician.com/social-preview.png'
+          content: 'https://brightstart-pediatrics.netlify.app/social-preview.png'
         }
       ],
       link: [
         { rel: 'icon', type: 'image/png', href: '/favicon.png' },
-        { rel: 'canonical', href: 'https://arkansaspediatrician.com' }
+        { rel: 'canonical', href: 'https://brightstart-pediatrics.netlify.app' }
       ],
       script: [
         {
           src: 'https://plausible.io/js/script.js',
           defer: true,
-          'data-domain': 'arkansaspediatrician.com'
+          'data-domain': 'brightstart-pediatrics.netlify.app'
         },
-        {
-          src: 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX',
-          async: true
-        },
+        { src: 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX', async: true },
         {
           type: 'text/javascript',
           children: `
@@ -74,31 +80,15 @@ export default defineNuxtConfig({
   // Global CSS
   css: ['@/assets/main.css'],
 
-  // Modules
+  // Only keep the image module
   modules: [
-    '@nuxt/image',
-    '@nuxtjs/sitemap'
+    '@nuxt/image'
   ],
 
-  // Base site URL
   site: {
-    url: 'https://arkansaspediatrician.com'
+    url: 'https://brightstart-pediatrics.netlify.app'
   },
 
-  // Sitemap configuration (all values must be strings or string[])
-  sitemap: {
-    hostname: 'https://arkansaspediatrician.com',
-    routes: [
-      '/',
-      '/about',
-      '/services',
-      '/contact',
-      '/faq'
-    ],
-    autoLastmod: true,
-    xsl: true
-  },
-
-  // For compatibility with newer Nuxt features
+  // Compatibility date
   compatibilityDate: '2025-04-10'
 })
