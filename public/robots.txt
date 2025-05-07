@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://minnesotahandy.netlify.app/sitemap.xml
+Sitemap: https://brightstartpediatrics.netlify.app/sitemap.xml

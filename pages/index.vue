@@ -1,12 +1,12 @@
 <template>
     <main>
-        <HeroSection />
+        <HeroSection :site-name="siteConfig.siteName" />
         <ServicesSection />
         <section aria-labelledby="contact-heading">
-            <ContactForm />
+            <ContactForm :email="siteConfig.email" />
         </section>
         <FaqSection />
-        <Footer />
+        <Footer :phone="siteConfig.phone" :email="siteConfig.email" :name="siteConfig.siteName" />
     </main>
 </template>
 
@@ -20,7 +20,7 @@ import { siteConfig } from '~/site.config'
 
 const structuredData = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "MedicalClinic",
     "name": siteConfig.siteName,
     "url": siteConfig.siteUrl,
     "telephone": siteConfig.phone,
@@ -41,6 +41,25 @@ const structuredData = {
 }
 
 useHead({
+    title: siteConfig.siteName,
+    meta: [
+        { name: 'description', content: siteConfig.description },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'robots', content: 'index, follow' },
+        { property: 'og:title', content: `${siteConfig.siteName} — Pediatric Care in Minneapolis` },
+        { property: 'og:description', content: siteConfig.description },
+        { property: 'og:image', content: siteConfig.socialImage },
+        { property: 'og:url', content: siteConfig.siteUrl },
+        { property: 'og:type', content: 'website' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: `${siteConfig.siteName} — Pediatric Care` },
+        { name: 'twitter:description', content: siteConfig.description },
+        { name: 'twitter:image', content: siteConfig.socialImage }
+    ],
+    link: [
+        { rel: 'icon', type: 'image/png', href: siteConfig.favicon },
+        { rel: 'canonical', href: siteConfig.siteUrl }
+    ],
     script: [
         {
             type: 'application/ld+json',

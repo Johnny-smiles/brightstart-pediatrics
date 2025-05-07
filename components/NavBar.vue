@@ -1,6 +1,6 @@
 <template>
     <nav class="nav">
-        <NuxtLink to="/" class="logo">Minnesota Handy</NuxtLink>
+        <NuxtLink to="/" class="logo">BrightStart Pediatrics</NuxtLink>
         <div class="links">
             <NuxtLink to="/about">About</NuxtLink>
             <NuxtLink to="/services">Services</NuxtLink>

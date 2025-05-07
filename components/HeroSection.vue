@@ -2,7 +2,7 @@
     <section class="hero bg-accent text-center py-20 px-6">
         <h1 class="text-3xl font-bold text-primary">Welcome to {{ siteName }}</h1>
         <p class="mt-4 text-lg">We’re local, dependable, and always happy to lend a hand.</p>
-        <NuxtImg src="/tools-hero.png" width="700" alt="Technicians with tools" class="mx-auto mt-8 rounded-custom" />
+        <NuxtImg src="/hero.png" width="700" alt="Technicians with tools" class="mx-auto mt-8 rounded-custom" />
         <br>
         <a href="#contact" class="cta bg-primary text-white mt-8 inline-block px-6 py-3 rounded-custom font-bold">Get in Touch</a>
     </section>

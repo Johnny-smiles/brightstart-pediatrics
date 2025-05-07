@@ -1,8 +1,9 @@
+// site.config.ts
 export const siteConfig = {
-    siteName: 'Minnesota Handy',
-    siteUrl: 'https://minnesotahandy.netlify.app',
-    phone: '+1-555-123-4567',
-    email: 'hello@minnesotahandy.com',
+    siteName: 'BrightStart Pediatrics',
+    siteUrl: 'https://brightstartclinic.com',
+    phone: '+1-612-555-7890',
+    email: 'info@brightstartclinic.com',
     location: {
         city: 'Minneapolis',
         state: 'MN',
@@ -11,15 +12,8 @@ export const siteConfig = {
         latitude: '44.9778',
         longitude: '-93.2650'
     },
-    description: 'Friendly, local home repair & electrical services in Minnesota.',
+    description: 'Expert pediatric care from birth through adolescence. Friendly, professional, and family-focused in Minneapolis.',
     hours: 'Mo-Fr 08:00-17:00',
     socialImage: '/social-preview.png',
-    favicon: '/favicon.png',
-    theme: {
-        primaryColor: '#224870',
-        secondaryColor: '#f3f4f6',
-        accentColor: '#d0e8f2',
-        fontFamily: ['Inter', 'sans-serif'],
-        borderRadius: '0.5rem'
-    }
+    favicon: '/favicon.png'
 }

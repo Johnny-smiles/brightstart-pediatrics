@@ -16,7 +16,7 @@
                 </div>
                 <div class="faq-item" id="faq-scheduling">
                     <h3><a href="#faq-scheduling">How do I schedule a service?</a></h3>
-                    <p>You can fill out our contact form or email us directly at <a href="mailto:hello@minnesotahandy.com">hello@minnesotahandy.com</a>.</p>
+                    <p>You can fill out our contact form or email us directly at <a href="mailto:hello@brightstartclinic.com">hello@brightstartclinic.com</a>.</p>
                 </div>
                 <div class="faq-item" id="faq-estimates">
                     <h3><a href="#faq-estimates">Do you offer free estimates?</a></h3>

@@ -1,20 +1,29 @@
-import { siteConfig } from './site.config'
+// tailwind.config.ts
+import type { Config } from 'tailwindcss'
 
-export default {
-    content: ['./components/**/*.{vue,js}', './pages/**/*.vue', './app.vue'],
+const config: Config = {
+    content: [
+        './components/**/*.{vue,js}',
+        './layouts/**/*.vue',
+        './pages/**/*.vue',
+        './app.vue',
+        './nuxt.config.ts',
+    ],
     theme: {
         extend: {
             colors: {
-                primary: siteConfig.theme.primaryColor,
-                secondary: siteConfig.theme.secondaryColor,
-                accent: siteConfig.theme.accentColor
+                primary: '#5EC4B8',  // soft teal
+                accent: '#FFD166',   // warm yellow
+                neutral: '#F8FAFC',  // off white
+                dark: '#1E293B'      // navy/blue-gray
             },
             fontFamily: {
-                sans: siteConfig.theme.fontFamily
+                sans: ['"Nunito"', 'sans-serif'],
             },
-            borderRadius: {
-                custom: siteConfig.theme.borderRadius
-            }
-        }
-    }
+        },
+    },
+    plugins: [],
 }
+export default config
+
+
