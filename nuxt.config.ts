@@ -1,16 +1,15 @@
 // nuxt.config.ts
 export default defineNuxtConfig({
+  // Server‐side render and static target
   ssr: true,
-
   nitro: {
     preset: 'static'
   },
 
+  // <head> configuration for SEO and social
   app: {
     head: {
-      htmlAttrs: {
-        lang: 'en'
-      },
+      htmlAttrs: { lang: 'en' },
       title: 'Arkansas Pediatrician — Caring for Your Child’s Health',
       meta: [
         { charset: 'utf-8' },
@@ -24,18 +23,26 @@ export default defineNuxtConfig({
         { property: 'og:title', content: 'Arkansas Pediatrician — Expert Child Healthcare' },
         {
           property: 'og:description',
-          content: 'Comprehensive pediatric care in Arkansas, from newborn check-ups to teen wellness.'
+          content:
+              'Comprehensive pediatric care in Arkansas, from newborn check-ups to teen wellness—your child’s health is our priority.'
         },
-        { property: 'og:image', content: 'https://arkansaspediatrician.com/social-preview.png' },
+        {
+          property: 'og:image',
+          content: 'https://arkansaspediatrician.com/social-preview.png'
+        },
         { property: 'og:url', content: 'https://arkansaspediatrician.com' },
         { property: 'og:type', content: 'website' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'Arkansas Pediatrician — Expert Child Healthcare' },
         {
           name: 'twitter:description',
-          content: 'Comprehensive pediatric care in Arkansas, from newborn check-ups to teen wellness.'
+          content:
+              'Comprehensive pediatric care in Arkansas, from newborn check-ups to teen wellness—your child’s health is our priority.'
         },
-        { name: 'twitter:image', content: 'https://arkansaspediatrician.com/social-preview.png' }
+        {
+          name: 'twitter:image',
+          content: 'https://arkansaspediatrician.com/social-preview.png'
+        }
       ],
       link: [
         { rel: 'icon', type: 'image/png', href: '/favicon.png' },
@@ -64,24 +71,34 @@ export default defineNuxtConfig({
     }
   },
 
+  // Global CSS
   css: ['@/assets/main.css'],
 
+  // Modules
   modules: [
     '@nuxt/image',
     '@nuxtjs/sitemap'
   ],
 
+  // Base site URL
   site: {
     url: 'https://arkansaspediatrician.com'
   },
 
+  // Sitemap configuration (all values must be strings or string[])
   sitemap: {
-    // ensure hostname is a string
     hostname: 'https://arkansaspediatrician.com',
+    routes: [
+      '/',
+      '/about',
+      '/services',
+      '/contact',
+      '/faq'
+    ],
     autoLastmod: true,
     xsl: true
-    // add `routes: [...]` here if you need to explicitly list any non-standard pages
   },
 
+  // For compatibility with newer Nuxt features
   compatibilityDate: '2025-04-10'
 })
